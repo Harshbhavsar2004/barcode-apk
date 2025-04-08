@@ -53,6 +53,9 @@ app.delete("/items/:id", async (req, res) => {
       res.status(500).json({ message: "Error deleting item", error: err.message });
     }
   });
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
   
 app.listen(3000, "0.0.0.0", () => {
     console.log("Server running on port 3000");
